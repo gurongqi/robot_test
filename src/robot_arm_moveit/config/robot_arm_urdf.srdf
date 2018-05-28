@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="robot_arm_urdf">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="arm">
+        <joint name="virtual_joint" />
+        <joint name="first_joint" />
+        <joint name="second_joint" />
+        <joint name="third_joint" />
+        <joint name="fourth_joint" />
+        <joint name="fifth_joint" />
+    </group>
+    <group name="gripper">
+        <link name="left_gripper_1" />
+        <link name="left_gripper_3" />
+        <link name="left_gripper_2" />
+        <link name="right_gripper_1" />
+        <link name="right_gripper_3" />
+        <link name="right_gripper_2" />
+    </group>
+    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+    <end_effector name="gripper" parent_link="fifth_Link" group="gripper" parent_group="arm" />
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="virtual_joint" type="fixed" parent_frame="world_frame" child_link="base_link" />
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="base_link" link2="first_Link" reason="Adjacent" />
+    <disable_collisions link1="base_link" link2="left_gripper_3" reason="Never" />
+    <disable_collisions link1="base_link" link2="second_Link" reason="Never" />
+    <disable_collisions link1="base_link" link2="third_Link" reason="Never" />
+    <disable_collisions link1="fifth_Link" link2="fourth_Link" reason="Adjacent" />
+    <disable_collisions link1="fifth_Link" link2="left_gripper_1" reason="Adjacent" />
+    <disable_collisions link1="fifth_Link" link2="left_gripper_2" reason="Adjacent" />
+    <disable_collisions link1="fifth_Link" link2="left_gripper_3" reason="Never" />
+    <disable_collisions link1="fifth_Link" link2="right_gripper_1" reason="Adjacent" />
+    <disable_collisions link1="fifth_Link" link2="right_gripper_2" reason="Adjacent" />
+    <disable_collisions link1="fifth_Link" link2="second_Link" reason="Never" />
+    <disable_collisions link1="fifth_Link" link2="third_Link" reason="Never" />
+    <disable_collisions link1="first_Link" link2="fourth_Link" reason="Never" />
+    <disable_collisions link1="first_Link" link2="left_gripper_1" reason="Never" />
+    <disable_collisions link1="first_Link" link2="left_gripper_2" reason="Never" />
+    <disable_collisions link1="first_Link" link2="left_gripper_3" reason="Never" />
+    <disable_collisions link1="first_Link" link2="right_gripper_2" reason="Never" />
+    <disable_collisions link1="first_Link" link2="second_Link" reason="Adjacent" />
+    <disable_collisions link1="first_Link" link2="third_Link" reason="Never" />
+    <disable_collisions link1="fourth_Link" link2="left_gripper_1" reason="Never" />
+    <disable_collisions link1="fourth_Link" link2="left_gripper_2" reason="Never" />
+    <disable_collisions link1="fourth_Link" link2="left_gripper_3" reason="Never" />
+    <disable_collisions link1="fourth_Link" link2="right_gripper_1" reason="Never" />
+    <disable_collisions link1="fourth_Link" link2="right_gripper_2" reason="Never" />
+    <disable_collisions link1="fourth_Link" link2="right_gripper_3" reason="Never" />
+    <disable_collisions link1="fourth_Link" link2="second_Link" reason="Never" />
+    <disable_collisions link1="fourth_Link" link2="third_Link" reason="Adjacent" />
+    <disable_collisions link1="left_gripper_1" link2="left_gripper_3" reason="Adjacent" />
+    <disable_collisions link1="left_gripper_1" link2="right_gripper_2" reason="Never" />
+    <disable_collisions link1="left_gripper_1" link2="right_gripper_3" reason="Never" />
+    <disable_collisions link1="left_gripper_1" link2="second_Link" reason="Never" />
+    <disable_collisions link1="left_gripper_1" link2="third_Link" reason="Never" />
+    <disable_collisions link1="left_gripper_2" link2="left_gripper_3" reason="Default" />
+    <disable_collisions link1="left_gripper_2" link2="right_gripper_1" reason="Never" />
+    <disable_collisions link1="left_gripper_2" link2="right_gripper_2" reason="Never" />
+    <disable_collisions link1="left_gripper_2" link2="right_gripper_3" reason="Never" />
+    <disable_collisions link1="left_gripper_2" link2="second_Link" reason="Never" />
+    <disable_collisions link1="left_gripper_2" link2="third_Link" reason="Never" />
+    <disable_collisions link1="left_gripper_3" link2="right_gripper_1" reason="Never" />
+    <disable_collisions link1="left_gripper_3" link2="right_gripper_2" reason="Never" />
+    <disable_collisions link1="left_gripper_3" link2="right_gripper_3" reason="Never" />
+    <disable_collisions link1="left_gripper_3" link2="second_Link" reason="Never" />
+    <disable_collisions link1="left_gripper_3" link2="third_Link" reason="Never" />
+    <disable_collisions link1="right_gripper_1" link2="right_gripper_3" reason="Adjacent" />
+    <disable_collisions link1="right_gripper_1" link2="second_Link" reason="Never" />
+    <disable_collisions link1="right_gripper_1" link2="third_Link" reason="Never" />
+    <disable_collisions link1="right_gripper_2" link2="right_gripper_3" reason="Default" />
+    <disable_collisions link1="right_gripper_2" link2="second_Link" reason="Never" />
+    <disable_collisions link1="right_gripper_2" link2="third_Link" reason="Never" />
+    <disable_collisions link1="right_gripper_3" link2="second_Link" reason="Never" />
+    <disable_collisions link1="right_gripper_3" link2="third_Link" reason="Never" />
+    <disable_collisions link1="second_Link" link2="third_Link" reason="Adjacent" />
+</robot>
