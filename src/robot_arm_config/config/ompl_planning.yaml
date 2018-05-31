@@ -145,6 +145,8 @@ arm:
     - LazyPRMstarkConfigDefault
     - SPARSkConfigDefault
     - SPARStwokConfigDefault
+  projection_evaluator: joints(first_joint,second_joint)
+  longest_valid_segment_fraction: 0.005
 gripper:
   planner_configs:
     - SBLkConfigDefault

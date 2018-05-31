@@ -317,7 +317,7 @@
     type="revolute">
     <origin
       xyz="0.031 -0.04815 0.031"
-      rpy="3.1416 6.0177E-09 -1.5708" />
+      rpy="1.5708 6.0177E-09 -1.5708" />
     <parent
       link="fourth_Link" />
     <child

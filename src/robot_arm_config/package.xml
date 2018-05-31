@@ -1,12 +1,12 @@
 <package>
 
-  <name>robot_arm_moveit</name>
+  <name>robot_arm_config</name>
   <version>0.3.0</version>
   <description>
      An automatically generated package with all the configuration and launch files for using the robot_arm_urdf with the MoveIt! Motion Planning Framework
   </description>
-  <author email="asdf@adfc.com">a s d fa s d</author>
-  <maintainer email="asdf@adfc.com">a s d fa s d</maintainer>
+  <author email="asdf@afasdf.com">asdfasdf</author>
+  <maintainer email="asdf@afasdf.com">asdfasdf</maintainer>
 
   <license>BSD</license>
 

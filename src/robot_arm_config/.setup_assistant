@@ -5,6 +5,6 @@ moveit_setup_assistant_config:
   SRDF:
     relative_path: config/robot_arm_urdf.srdf
   CONFIG:
-    author_name: a s d fa s d
-    author_email: asdf@adfc.com
-    generated_timestamp: 1527176093
+    author_name: asdfasdf
+    author_email: asdf@afasdf.com
+    generated_timestamp: 1527782541

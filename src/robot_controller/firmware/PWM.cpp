@@ -71,10 +71,10 @@ void ServoController::ServoPwmDutyCompare()//脉宽变化比较及速度控制
 
 void ServoController::InitPWM()
 {
-	myservo[0].attach(2,500,2500);  // attaches the servo on pin 2 to the servo object
-	myservo[1].attach(3,500,2500);  
-	myservo[2].attach(4,500,2500);
-	myservo[3].attach(5,500,2500);
-	myservo[4].attach(6,500,2500);
-	myservo[5].attach(7,500,2500);
+    myservo[0].attach(7,500,2500);  // attaches the servo on pin 2 to the servo object
+	myservo[1].attach(6,500,2500);
+	myservo[2].attach(5,500,2500);
+	myservo[3].attach(4,500,2500);
+	myservo[4].attach(3,500,2500);
+	myservo[5].attach(2,500,2500);
 }
