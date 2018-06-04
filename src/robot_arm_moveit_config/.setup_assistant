@@ -5,6 +5,6 @@ moveit_setup_assistant_config:
   SRDF:
     relative_path: config/robot_arm_urdf.srdf
   CONFIG:
-    author_name: rognqigu
-    author_email: gurongqi@gmail.com
-    generated_timestamp: 1527819337
+    author_name: rongqi
+    author_email: rongqi.gu@westwell-lab.com
+    generated_timestamp: 1527837509
