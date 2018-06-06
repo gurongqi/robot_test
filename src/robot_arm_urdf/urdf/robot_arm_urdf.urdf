@@ -96,7 +96,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
   </joint>
   <link
     name="second_Link">
@@ -154,7 +154,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
   </joint>
   <link
     name="third_Link">
@@ -212,7 +212,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
   </joint>
   <link
     name="fourth_Link">
@@ -270,7 +270,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
   </joint>
   <link
     name="fifth_Link">
@@ -328,7 +328,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
   </joint>
   <link
     name="right_gripper_1">
@@ -386,7 +386,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
   </joint>
   <link
     name="right_gripper_2">
@@ -444,7 +444,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
     <mimic joint="right_gripper1_joint" multiplier="-1" offset="0" />
   </joint>
   <link
@@ -503,7 +503,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
     <mimic joint="right_gripper1_joint" multiplier="-1" offset="0" />
   </joint>
   <link
@@ -562,7 +562,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
     <mimic joint="right_gripper1_joint" multiplier="1" offset="0" />
   </joint>
   <link
@@ -621,7 +621,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
     <mimic joint="right_gripper1_joint" multiplier="1" offset="0" />
   </joint>
   <link
@@ -680,7 +680,7 @@
       lower="-1.5708"
       upper="1.5708"
       effort="1000"
-      velocity="0.5" />
+      velocity="5" />
     <mimic joint="right_gripper1_joint" multiplier="-1" offset="0" />
   </joint>
 </robot>
