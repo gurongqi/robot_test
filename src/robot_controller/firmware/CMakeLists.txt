@@ -6,8 +6,8 @@ include_directories(${ROS_LIB_DIR})
 add_definitions(-DUSB_CON)
 
 generate_arduino_firmware(robot_controller
-  SRCS robot_controller.cpp ${ROS_LIB_DIR}/time.cpp PWM.cpp
-  HDRS include.h PWM.h
+  SRCS robot_controller.cpp ${ROS_LIB_DIR}/time.cpp PWM.cpp LobotServoController.cpp
+  HDRS include.h PWM.h LobotServoController.h
   BOARD atmega328
   PORT /dev/ttyUSB0
 )
